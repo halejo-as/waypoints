@@ -1,0 +1,6 @@
+string  option
+string  group_name
+string  wp_name
+int16  pos             
+---
+bool success     

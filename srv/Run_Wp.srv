@@ -1,0 +1,6 @@
+string  wp_name
+string  gr_name
+bool    loop
+int16   index         
+---
+bool success     

@@ -1,0 +1,16 @@
+<library path="libwaypoints">
+  <class name="waypoints/Waypoints"
+         type="waypoints::WaypointTool"
+         base_class_type="rviz::Tool">
+    <description>
+      Tool for set waypoints for navigation
+    </description>
+  </class>
+   <class name="waypoints/waypointPanel"
+         type="waypoints::waypointPanel"
+         base_class_type="rviz::Panel">
+    <description>
+      Panel for waypoints
+    </description>
+  </class>
+</library>
