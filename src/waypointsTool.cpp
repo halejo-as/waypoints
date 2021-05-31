@@ -5,7 +5,7 @@
 #include "rviz/display_context.h"
 #include "rviz/properties/string_property.h"
 
-#include "waypoints_tool.h"
+#include "waypointsTool.h"
 #include <QString>
 #include <QInputDialog>
 #include <QLineEdit>

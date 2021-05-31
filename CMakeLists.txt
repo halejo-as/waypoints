@@ -17,15 +17,16 @@ set(waypoints_INCLUDE_DIRECTORIES
 )
 
 set(HEADERS_FILES
-  include/waypoints_tool.h
+  include/waypointsTool.h
   include/waypointPanel.h
+  include/waypointServer.h
 )
 
 add_message_files(
    FILES
    waypoint_msg.msg
    waypoint_group.msg
-   waypointArray.msg
+   waypoint_array.msg
 )
 add_service_files(
    FILES
@@ -68,7 +69,7 @@ add_definitions(-DQT_NO_KEYWORDS)
 
 
 QT5_WRAP_CPP(MOC_FILES
-  include/waypoints_tool.h
+  include/waypointsTool.h
   include/waypointPanel.h 
  
 )
@@ -78,14 +79,14 @@ qt5_wrap_ui(UIC_FILES
 )
 
 set(SOURCE_FILES
-  src/waypoints_tool.cpp
+  src/waypointsTool.cpp
   src/waypointPanel.cpp 
   ${MOC_FILES}
 )
 
 
 
-add_executable(waypoints_server src/waypoints_server.cpp)
+add_executable(waypoints_server src/waypointServer.cpp)
 target_link_libraries(waypoints_server ${catkin_LIBRARIES})
 add_dependencies(waypoints_server ${PROJECT_NAME}_gencpp)
 

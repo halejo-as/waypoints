@@ -35,6 +35,7 @@ namespace waypoints
             ui->setupUi(this);
 
             pub_rviz = n.advertise<geometry_msgs::PoseArray>("waypoint_server/waypoints_rviz", 1);
+            pub_path = n.advertise<nav_msgs::Path>("waypoint_server/waypoints_path", 1);
             sub = n.subscribe("waypoint_server/waypoints", 3, &waypointPanel::Callback, this);
 
             connect(ui->deleteWpButton, SIGNAL(clicked(bool)), this, SLOT(onDeleteWaypoint()));
@@ -62,7 +63,6 @@ namespace waypoints
         geometry_msgs::PoseArray arrayWp_rviz;
         arrayWp_rviz.header.stamp = ros::Time::now();
         arrayWp_rviz.header.frame_id = "map";
-
         arrayWp_rviz.poses.resize(wp_map.size());
         int i = 0;
         ui->listWp->clear();
@@ -81,10 +81,11 @@ namespace waypoints
         pub_rviz.publish(arrayWp_rviz);
         int index = ui->groupBox->findText(textGroupBox.c_str());
         ui->groupBox->setCurrentIndex(index);
+        
         ROS_INFO("Update waypoint server");
     }
 
-    void waypointPanel::Callback(waypoints::waypointArray wp_msg)
+    void waypointPanel::Callback(waypoints::waypoint_array wp_msg)
     {
         ROS_INFO("Received wp_msg");
         wp_map.clear();
@@ -213,7 +214,26 @@ namespace waypoints
                 std::string item = *it;
                 ui->listGroup->addItem(item.c_str());
             }
+            //publish group path
+            publishPath(group.toStdString());
         }
+    }
+    void waypointPanel::publishPath(const std::string group){
+      nav_msgs::Path path_group, path_zero;
+      path_group.header.stamp = ros::Time::now();
+      path_group.header.frame_id = "map";
+      path_group.poses.resize(groups[group].wp_list.size());
+      int i = 0;
+      for(std::string it : groups[group].wp_list){
+        geometry_msgs::PoseStamped ps;
+        ps.header.stamp = ros::Time::now();
+        ps.header.frame_id = "map";
+        ps.pose = wp_map[it].pose;
+        path_group.poses[i] = ps;
+        i++;
+      }
+      ROS_INFO("Publish Group Path");
+      pub_path.publish(path_group);
     }
 
     void waypointPanel::onStopGroup()

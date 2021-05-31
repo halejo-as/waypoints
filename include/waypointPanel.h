@@ -7,9 +7,10 @@
 #include <QWidget>
 #include <geometry_msgs/PoseArray.h>
 #include <geometry_msgs/PoseStamped.h>
+#include <nav_msgs/Path.h>
 #include "waypoints/waypoint_msg.h"
 #include "waypoints/waypoint_group.h"
-#include "waypoints/waypointArray.h"
+#include "waypoints/waypoint_array.h"
 
 
 
@@ -31,7 +32,7 @@ namespace waypoints
     public:
         explicit waypointPanel(QWidget *parent = 0);
         virtual ~waypointPanel();
-        void Callback(waypoints::waypointArray wp_msg);
+        void Callback(waypoints::waypoint_array wp_msg);
         void PublishWp();
         Ui::waypointPanel *ui;
 
@@ -48,11 +49,13 @@ namespace waypoints
         void onLoop(int state);
         void onSaveFile();
         void onLoadFile();
+        void publishPath(const std::string group);
 
     private:
         ros::NodeHandle n;
         ros::Subscriber sub;
         ros::Publisher pub_rviz;
+        ros::Publisher pub_path;
 
         std::map<std::string, waypoints::waypoint_msg> wp_map;
         std::map<std::string, waypoints::waypoint_group> groups;
