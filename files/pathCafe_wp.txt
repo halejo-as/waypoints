@@ -1,0 +1,252 @@
+name: p1
+pose: 
+  position: 
+    x: 0.972927
+    y: -0.0071395
+    z: 0
+  orientation: 
+    x: 0
+    y: 0
+    z: 0.00794337
+    w: 0.999968
+---
+name: p10
+pose: 
+  position: 
+    x: 6.96474
+    y: 4.80965
+    z: 0
+  orientation: 
+    x: 0
+    y: 0
+    z: 0.999983
+    w: -0.00579445
+---
+name: p11
+pose: 
+  position: 
+    x: 5.98469
+    y: 4.75741
+    z: 0
+  orientation: 
+    x: 0
+    y: 0
+    z: -0.702101
+    w: 0.712078
+---
+name: p12
+pose: 
+  position: 
+    x: 5.93938
+    y: 2.63891
+    z: 0
+  orientation: 
+    x: 0
+    y: 0
+    z: 0.999989
+    w: 0.00463909
+---
+name: p13
+pose: 
+  position: 
+    x: 4.90985
+    y: 2.56175
+    z: 0
+  orientation: 
+    x: 0
+    y: 0
+    z: 0.703848
+    w: 0.710351
+---
+name: p14
+pose: 
+  position: 
+    x: 4.95294
+    y: 4.54435
+    z: 0
+  orientation: 
+    x: 0
+    y: 0
+    z: 0.999948
+    w: -0.0102176
+---
+name: p15
+pose: 
+  position: 
+    x: 3.98501
+    y: 4.5162
+    z: 0
+  orientation: 
+    x: 0
+    y: 0
+    z: -0.710376
+    w: 0.703822
+---
+name: p16
+pose: 
+  position: 
+    x: 4.00288
+    y: 2.50825
+    z: 0
+  orientation: 
+    x: 0
+    y: 0
+    z: 0.999961
+    w: -0.00880607
+---
+name: p17
+pose: 
+  position: 
+    x: 2.54028
+    y: 2.63334
+    z: 0
+  orientation: 
+    x: 0
+    y: 0
+    z: 0.70379
+    w: 0.710408
+---
+name: p18
+pose: 
+  position: 
+    x: 2.53357
+    y: 4.54289
+    z: 0
+  orientation: 
+    x: 0
+    y: 0
+    z: 0.999991
+    w: 0.00428719
+---
+name: p19
+pose: 
+  position: 
+    x: 1.44135
+    y: 4.51607
+    z: 0
+  orientation: 
+    x: 0
+    y: 0
+    z: -0.709873
+    w: 0.70433
+---
+name: p2
+pose: 
+  position: 
+    x: 2.9658
+    y: 0.0291818
+    z: 0
+  orientation: 
+    x: 0
+    y: 0
+    z: 0.707334
+    w: 0.706879
+---
+name: p20
+pose: 
+  position: 
+    x: 1.34813
+    y: 2.55831
+    z: 0
+  orientation: 
+    x: 0
+    y: 0
+    z: 0.99999
+    w: 0.00457197
+---
+name: p21
+pose: 
+  position: 
+    x: -0.00550747
+    y: 2.50889
+    z: 0
+  orientation: 
+    x: 0
+    y: 0
+    z: 0.703727
+    w: 0.71047
+---
+name: p3
+pose: 
+  position: 
+    x: 3.01437
+    y: 1.96438
+    z: 0
+  orientation: 
+    x: 0
+    y: 0
+    z: 0.000200768
+    w: 1
+---
+name: p4
+pose: 
+  position: 
+    x: 4.01259
+    y: 1.94488
+    z: 0
+  orientation: 
+    x: 0
+    y: 0
+    z: -0.720027
+    w: 0.693946
+---
+name: p5
+pose: 
+  position: 
+    x: 3.9943
+    y: 0.0346367
+    z: 0
+  orientation: 
+    x: 0
+    y: 0
+    z: -0.00478476
+    w: 0.999989
+---
+name: p6
+pose: 
+  position: 
+    x: 5.95532
+    y: -0.00866862
+    z: 0
+  orientation: 
+    x: 0
+    y: 0
+    z: 0.71528
+    w: 0.698838
+---
+name: p7
+pose: 
+  position: 
+    x: 5.98686
+    y: 1.98716
+    z: 0
+  orientation: 
+    x: 0
+    y: 0
+    z: -0.00499286
+    w: 0.999988
+---
+name: p8
+pose: 
+  position: 
+    x: 6.97865
+    y: 2.00176
+    z: 0
+  orientation: 
+    x: 0
+    y: 0
+    z: -0.710438
+    w: 0.70376
+---
+name: p9
+pose: 
+  position: 
+    x: 6.9963
+    y: 0.0180922
+    z: 0
+  orientation: 
+    x: 0
+    y: 0
+    z: 0.70813
+    w: 0.706082
+---
